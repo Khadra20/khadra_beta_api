@@ -15,7 +15,7 @@ const ourroute = require('./Routes/homepagerout.js/ourcleintroute');
 const app=express();
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({origin:'http://localhost:5173'}))
 const dbconnect=async()=>{
   const password = 'hayat123';
   // Construct the connection string
