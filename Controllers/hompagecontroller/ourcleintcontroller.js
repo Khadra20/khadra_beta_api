@@ -43,7 +43,7 @@ const ourdel=async(req,res)=>{
 const ourbyid=async(req,res)=>{
     try {
         const id=req.params.id
-        const data=ourmodel.findById(id)
+        const data=await ourmodel.findById(id)
         res.status(200).json(data)
     } catch (error) {
         res.status(409).send(error.message)
