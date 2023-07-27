@@ -40,7 +40,7 @@ app.use('/ourcleint',ourroute)
 
 //   const mongod =  MongoMemoryServer.create();
 
-app.get('/',()=> {
+app.get('/',(req,res)=> {
   res.json("hi")
 
   
