@@ -6,7 +6,7 @@ const aboutmodel=require('../Schema/about')
    
 const aboutget=async(req,res)=>{
 try {
-    const aboute=await aboutmodel.find();
+    const aboute=await aboutmodel.find().sort({_id:-1}).limit(1);
     res.status(200).send(aboute)
 } catch (error) {
     // console.log(error.message)
