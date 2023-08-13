@@ -24,4 +24,4 @@ const jwt=require('jsonwebtoken')
     res.status(400).send(error.message)
    }
 }
-exports.loginpost=loginpost;
+module.exports = {loginpost};
