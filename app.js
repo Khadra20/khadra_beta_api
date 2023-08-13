@@ -13,7 +13,7 @@ const galaryroute = require('./Routes/homepagerout.js/imaggallaryroute');
 const serviceroute = require('./Routes/homepagerout.js/serviceroute');
 const ourroute = require('./Routes/homepagerout.js/ourcleintroute');
 const logrout =require('./Routes/loginrout')
-const outherticatteRoute=require('./midelware')
+const outherticatteRoute=require('./Routes/midelware')
 
 const app=express();
 
@@ -33,8 +33,8 @@ console.log("server startef")
     
 }
 dbconnect();
+app.use('/user', outherticatteRoute(["admin"]),  route)
 app.use('/login',logrout)
-app.use('/user',route)
 app.use('/Guryo',router)
 app.use('/image',imgroute)
 app.use('/homesit',xogrout)

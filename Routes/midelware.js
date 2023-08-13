@@ -1,5 +1,5 @@
 const { jwt } = require("jsonwebtoken")
-const usermodel = require("./Schema/userschema")
+const usermodel = require("../Schema/userschema")
 const outherticatteRoute=()=>{
     return (req,res,next)=>{
         const tokenHeader=req.headers['authorization']
