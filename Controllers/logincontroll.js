@@ -6,10 +6,10 @@ const express = require('express')
 require('dotenv').config();
 const jwt=require('jsonwebtoken')
   const loginpost =async(req,res)=>{
-   return res.send({
-    login:true,
-    body:req.body
-   })
+  //  return res.send({
+  //   login:true,
+  //   body:req.body
+  //  })
 
     const {error}=loginvalidation(req.body)
     if(error) return res.status(400).send({error})
