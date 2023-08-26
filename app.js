@@ -18,7 +18,7 @@ const outherticatteRoute=require('./Routes/midelware')
 const app=express();
 
 app.use(express.json())
-app.use(cors({origin:'http://localhost:5173'}))
+app.use(cors({origin:'*'}))
 const dbconnect=async()=>{
   const password = 'hayat123';
 
