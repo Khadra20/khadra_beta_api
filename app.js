@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(cors({origin:'http://localhost:5173'}))
 const dbconnect=async()=>{
   const password = 'hayat123';
-  // Construct the connection string
+
   const uri = `mongodb+srv://hayat:${password}@cluster0.yo08vqy.mongodb.net/test?retryWrites=true&w=majority`;
   // Connect to the MongoDB Atlas cluster
 
@@ -35,7 +35,7 @@ console.log("server startef")
 dbconnect();
 app.use('/user', outherticatteRoute(["admin"]),  route)
 app.use('/login',logrout)
-app.use('/Guryo',router)
+app.use('/Guryo', outherticatteRoute([admin,customercare]), router)
 app.use('/image',imgroute)
 app.use('/homesit',xogrout)
 app.use('/contect',conroute)
